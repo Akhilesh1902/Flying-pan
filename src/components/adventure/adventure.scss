@@ -1,0 +1,174 @@
+.adventure {
+  //   height: 100vh;
+  background-color: white;
+  h1 {
+    margin-right: 1em;
+    padding-top: 1em;
+    text-align: right;
+    background: none;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 4.5em;
+      height: 0.05em;
+      background-color: black;
+      position: absolute;
+      margin-right: 4.5em;
+      right: 0;
+    }
+  }
+}
+img {
+  width: 100%;
+  height: 100px;
+}
+
+.adventure {
+  height: fit-content;
+  margin: 0;
+  padding-bottom: 4em;
+}
+.adventure__cardcontainer {
+  width: 90%;
+  height: fit-content;
+  gap: 1rem;
+  margin: 2em auto;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  z-index: 1;
+  p {
+    align-self: flex-end;
+    font-size: 0.9em;
+    width: 80%;
+    z-index: 1;
+  }
+  .first-p {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .second-p {
+    justify-self: flex-end;
+    grid-row: 2;
+    grid-column: 1;
+    text-align: right;
+  }
+}
+.adventure__card {
+  background-image: url("../../static/images/bman.jpg");
+  background-size: cover;
+  position: relative;
+  width: 40vw;
+  aspect-ratio: 16/9;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: flex-end;
+
+  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.288);
+  border: 1px solid rgba(114, 114, 114, 0.644);
+  border-radius: 10px;
+  z-index: 1;
+  &:last-child {
+    right: 0;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: flex-start;
+  }
+  // &::after {
+  //   display: block;
+  //   position: absolute;
+  //   z-index: -2;
+  //   content: "";
+  //   width: 300px;
+  //   aspect-ratio: 1;
+  //   background-image: url("data:image/svg+xml;utf8, %3Csvg width='100%25' height='100%25' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' %3E %3Cdefs%3E %3CclipPath id='shape'%3E %3Cpath fill='currentColor' d='M820.5,666.5Q766,833,588,864.5Q410,896,276.5,784Q143,672,124.5,491Q106,310,262,226.5Q418,143,585,163.5Q752,184,813.5,342Q875,500,820.5,666.5Z'%3E%3C/path%3E %3C/clipPath%3E %3C/defs%3E %3Cg clip-path='url(%23shape)'%3E %3Cpath fill='%23738a4d' d='M820.5,666.5Q766,833,588,864.5Q410,896,276.5,784Q143,672,124.5,491Q106,310,262,226.5Q418,143,585,163.5Q752,184,813.5,342Q875,500,820.5,666.5Z' /%3E %3C/g%3E %3C/svg%3E");
+  // }
+}
+.advCard {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.blob {
+  width: 20em;
+  aspect-ratio: 1;
+
+  position: absolute;
+  left: -10em;
+  // z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8, %3Csvg width='100%25' height='100%25' viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg' %3E %3Cdefs%3E %3CclipPath id='shape'%3E %3Cpath fill='currentColor' d='M820.5,666.5Q766,833,588,864.5Q410,896,276.5,784Q143,672,124.5,491Q106,310,262,226.5Q418,143,585,163.5Q752,184,813.5,342Q875,500,820.5,666.5Z'%3E%3C/path%3E %3C/clipPath%3E %3C/defs%3E %3Cg clip-path='url(%23shape)'%3E %3Cpath fill='%23738a4d' d='M820.5,666.5Q766,833,588,864.5Q410,896,276.5,784Q143,672,124.5,491Q106,310,262,226.5Q418,143,585,163.5Q752,184,813.5,342Q875,500,820.5,666.5Z' /%3E %3C/g%3E %3C/svg%3E");
+}
+// .blob:last-child {
+//   right: -10em;
+//   left: auto;
+//   // top: 0;
+//   bottom: -5em;
+// }
+.adventure__card:first-child::after {
+  top: -5rem;
+  left: -10rem;
+}
+@media screen and (min-width: 900px) {
+  .adventure h1 {
+    font-size: 5rem;
+    // color: red;
+  }
+  .adventure__cardcontainer {
+    gap: 4rem;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .adventure__cardcontainer p {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .adventure__cardcontainer p {
+    font-size: 1.2em;
+  }
+  .adventure__card {
+    max-width: 500px;
+  }
+}
+
+// mobile
+
+@media screen and (max-width: 600px) {
+  .adventure__cardcontainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    p {
+      font-size: 1rem;
+    }
+    .adventure__card {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: flex-start;
+      &:last-child {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: flex-end;
+      }
+    }
+    .first-p {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: flex-start;
+      width: 50vw;
+    }
+    .second-p {
+      width: 50vw;
+      align-self: flex-start;
+      grid-column: 1;
+      //   color: red;
+      grid-row: 4;
+    }
+  }
+}

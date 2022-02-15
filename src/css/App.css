@@ -1,0 +1,17 @@
+@import url("./reset.css");
+
+body {
+  background-color: rgb(49, 77, 31);
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
