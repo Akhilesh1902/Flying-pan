@@ -10,7 +10,7 @@ function HeroContents() {
           className="herocontents__video"
           src={video}
           muted
-          // autoPlay={"autoplay"}
+          autoPlay={"autoplay"}
           preload="auto"
           loop
         />
