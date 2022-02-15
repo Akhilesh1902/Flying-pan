@@ -6,7 +6,7 @@ function FooterLinks({ linkObj }) {
       {linkObj.map((item) => {
         return (
           <li className="footer__link__item">
-            <a href={item.link}>{item.name}</a>
+            <a href="home">{item.name}</a>
           </li>
         );
       })}

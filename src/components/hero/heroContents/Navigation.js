@@ -3,10 +3,7 @@ import gsap from "gsap";
 console.log(gsap);
 
 function Navigation() {
-  const hamBurger = document.getElementsByClassName("hero__nav__hamburger");
-  const navList = document.getElementsByClassName("hero__nav__list");
-
-  const [navClicked, setnavClicked] = useState(false);
+  let [navClicked, setnavClicked] = useState(false);
   console.log(navClicked);
   return (
     <>
@@ -22,17 +19,17 @@ function Navigation() {
         </button>
         <ul className="hero__nav__list flex">
           <li className="hero__nav__list__item">
-            <a href="#" className="hero__navLink">
+            <a href="home" className="hero__navLink">
               home
             </a>
           </li>
           <li className="hero__nav__list__item">
-            <a href="#" className="hero__navLink">
+            <a href="home" className="hero__navLink">
               about
             </a>
           </li>
           <li className="hero__nav__list__item">
-            <a href="#" className="hero__navLink">
+            <a href="home" className="hero__navLink">
               contact
             </a>
           </li>
@@ -65,17 +62,17 @@ function Navigation() {
             </button>
             <ul className="hero__nav__list flex">
               <li className="hero__nav__list__item">
-                <a href="#" className="hero__navLink">
+                <a href="home" className="hero__navLink">
                   home
                 </a>
               </li>
               <li className="hero__nav__list__item">
-                <a href="#" className="hero__navLink">
+                <a href="home" className="hero__navLink">
                   about
                 </a>
               </li>
               <li className="hero__nav__list__item">
-                <a href="#" className="hero__navLink">
+                <a href="home" className="hero__navLink">
                   contact
                 </a>
               </li>

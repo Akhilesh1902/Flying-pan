@@ -4,7 +4,7 @@ import "../../../../node_modules/video-react/dist/video-react.css";
 
 function HeroContents() {
   return (
-    <div className="app__hero__contents">
+    <div id="home" className="app__hero__contents">
       <div className="herocontents__videocontainer">
         <video
           className="herocontents__video"
