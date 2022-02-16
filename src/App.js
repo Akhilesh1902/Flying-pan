@@ -10,16 +10,16 @@ function App() {
   return (
     <>
       <Router>
-        <Hero />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/home" element={<Hero />} />
+        </Routes>
+        {/* <Hero /> */}
         <Adventure />
         <Cards />
         <UserExp />
         <Footer />
         {/* adding router */}
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/home" element={<Hero />} />
-        </Routes>
       </Router>
     </>
   );
